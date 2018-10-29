@@ -37,7 +37,7 @@ class SandhiSplitter(text_problems.Text2TextProblem):
     }]
 
   def generate_samples(self, data_dir, tmp_dir, dataset_split):
-    filename = '/home/yzk/Dropbox/univ/JMC/code/data/rv_samhita-pada.tsv'
+    filename = './data/rv_train.tsv'
     dt = pd.read_csv(filename, delimiter='\t')
     for key, row in dt.iterrows():
         s, p = row['samhita'], row['pada']
