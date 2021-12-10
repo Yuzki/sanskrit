@@ -1,0 +1,128 @@
+\ExplSyntaxOn
+
+\tl_new:N \l_replace_tl_sktiast
+\cs_generate_variant:Nn \tl_replace_all:Nnn { Nfn }
+\cs_new:Npn \my_replace_sktiast:n #1
+{
+ \tl_set:Nn \l_replace_tl_sktiast {#1}
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;aa } { ā́ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;AA } { Ā́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str aa } { ā̀ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str AA } { Ā̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;a } { á }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;A } { Á }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str a } { à }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str A } { À }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { "a } { ä }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { "A } { Ä }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { aa } { ā }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { AA } { Ā }
+\tl_replace_all:Nnn \l_replace_tl_sktiast { \c_tilde_str a } { ã }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;ii } { ī́ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;II } { Ī́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str ii } { ī̀ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str II } { Ī̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;i } { í }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;I } { Í }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str i } { ì }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str I } { Ì }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { "i } { ï }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { "I } { Ï }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ii } { ī }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { II } { Ī }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { \c_tilde_str i } { ĩ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;uu } { ū́ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;UU } { Ū́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str uu } { ū̀ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str UU } { Ū̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;u } { ú }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;U } { Ú }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str u } { ù }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str U } { Ù }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { "u } { ü }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { "U } { Ü }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { uu } { ū }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { UU } { Ū }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { \c_tilde_str u } { ũ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;e } { é }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;E } { É }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str e } { è }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str E } { È }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { "e } { ë }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { "E } { Ë }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ,e } { ĕ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;o } { ó }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;O } { Ó }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str o } { ò }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str O } { Ò }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { "o } { ö }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { "O } { Ö }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ,o } { ŏ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;..rr } { r̥̄́ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;..RR } { R̥̄́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str ..rr } { r̥̄̀ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str ..RR } { R̥̄̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ..rr } { r̥̄ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ..RR } { R̥̄ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;.r } { ŕ̥ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;.R } { Ŕ̥ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str .r } { r̥̀ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str .R } { R̥̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .r } { r̥ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .R } { R̥ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;..ll } { l̥̄́ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;..LL } { L̥̄́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str ..ll } { l̥̄̀ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str ..LL } { L̥̄̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ..ll } { l̥̄ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ..LL } { L̥̄ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;.l } { ĺ̥ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;.L } { Ĺ̥ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str .l } { l̥̀ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str .L } { L̥̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .l } { l̥ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .L } { L̥ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str n } { ṅ }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str N } { Ṅ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;n } { ñ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;N } { Ñ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .t } { ṭ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .T } { Ṭ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .d } { ḍ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .D } { Ḍ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;l } { ḷ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;L } { Ḷ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .n } { ṇ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .N } { Ṇ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;s } { ś }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;S } { Ś }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .s } { ṣ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .S } { Ṣ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .h } { ḥ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .H } { Ḥ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .f } { ḫ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .F } { Ḫ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .x } { ẖ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .X } { H̱ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .m } { ṃ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { .M } { Ṃ }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str m } { ṁ }
+ \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_colon_str m } { Ṁ }
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;m } { m̐ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_sktiast { ;M } { M̐ }%combined
+%  \tl_replace_all:Nnn \l_replace_tl_sktiast { , } { . }
+ % \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_underscore_str a } { \textsubscript{a} }
+ % \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_underscore_str i } { \textsubscript{i} }
+ % \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_underscore_str u } { \textsubscript{u} }
+ % \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_underscore_str e } { \textsubscript{e} }
+ % \tl_replace_all:Nfn \l_replace_tl_sktiast { \c_underscore_str o } { \textsubscript{o} }
+ \tl_use:N \l_replace_tl_sktiast
+}
+
+
+\NewDocumentCommand \sktiast { m }
+ {
+    \my_replace_sktiast:n { #1 }
+ }
+
+\ExplSyntaxOff

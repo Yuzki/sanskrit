@@ -1,0 +1,95 @@
+\ExplSyntaxOn
+
+\tl_new:N \l_replace_tl_pie
+\cs_generate_variant:Nn \tl_replace_all:Nnn { Nfn }
+\cs_new:Npn \my_replace_pie:n #1
+{
+ \tl_set:Nn \l_replace_tl_pie {#1}
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;aa } { ā́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str aa } { ā̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;a } { á }
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str a } { à }
+ \tl_replace_all:Nnn \l_replace_tl_pie { "a } { ä }
+ \tl_replace_all:Nnn \l_replace_tl_pie { aa } { ā }
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;ii } { ī́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str ii } { ī̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;i } { í }
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str i } { ì }
+ \tl_replace_all:Nnn \l_replace_tl_pie { "i } { ï }
+ \tl_replace_all:Nnn \l_replace_tl_pie { ii } { ī }
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;uu } { ū́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str uu } { ū̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;u } { ú }
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str u } { ù }
+ \tl_replace_all:Nnn \l_replace_tl_pie { "u } { ü }
+ \tl_replace_all:Nnn \l_replace_tl_pie { uu } { ū }
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;ee } { ḗ }
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;e } { é }
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str e } { è }
+ \tl_replace_all:Nnn \l_replace_tl_pie { "e } { ë }
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;oo } { ṓ }
+ \tl_replace_all:Nnn \l_replace_tl_pie { oo } { ō }
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;o } { ó }
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str o } { ò }
+ \tl_replace_all:Nnn \l_replace_tl_pie { "o } { ö }
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;..rr } { r̥̅́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str ..rr } { r̥̅̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_pie { ..rr } { r̥̅ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;.r } { ŕ̥ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str .r } { r̥̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_pie { .r } { r̥ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;..ll } { l̥̅́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str ..ll } { l̥̅̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_pie { ..ll } { l̥̅ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;.l } { ĺ̥ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_pie { \c_colon_str .l } { l̥̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_pie { .l } { l̥ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;.n } { ń̥ }
+ \tl_replace_all:Nnn \l_replace_tl_pie { .n } { n̥ }
+ \tl_replace_all:Nnn \l_replace_tl_pie { ;.m } { ḿ̥ }
+ \tl_replace_all:Nnn \l_replace_tl_pie { .m } { m̥ }
+ \tl_replace_all:Nnn \l_replace_tl_pie { gh } { gʰ }
+ \tl_replace_all:Nnn \l_replace_tl_pie { g'h } { g̑ʰ }
+%  \tl_replace_all:Nnn \l_replace_tl_pie { g'h } { ǵʰ }
+ \tl_replace_all:Nnn \l_replace_tl_pie { g' } { g̑ }
+%  \tl_replace_all:Nnn \l_replace_tl_pie { g' } { ǵ }
+\tl_replace_all:Nnn \l_replace_tl_pie { k' } { k̑ }
+% \tl_replace_all:Nnn \l_replace_tl_pie { k' } { ḱ }
+\tl_replace_all:Nnn \l_replace_tl_pie { gwh } { gʷʰ }
+\tl_replace_all:Nnn \l_replace_tl_pie { gw } { gʷ }
+\tl_replace_all:Nnn \l_replace_tl_pie { kw } { kʷ }
+\tl_replace_all:Nnn \l_replace_tl_pie { dh } { dʰ }
+\tl_replace_all:Nnn \l_replace_tl_pie { bh } { bʰ }
+\tl_replace_all:Nnn \l_replace_tl_pie { y } { i̯ }
+\tl_replace_all:Nnn \l_replace_tl_pie { w } { u̯ }
+\tl_replace_all:Nnn \l_replace_tl_pie { h1 } { h{\rm \textsubscript{1}} }
+\tl_replace_all:Nnn \l_replace_tl_pie { h2 } { h{\rm \textsubscript{2}} }
+\tl_replace_all:Nnn \l_replace_tl_pie { h3 } { h{\rm \textsubscript{3}} }
+% \tl_replace_all:Nnn \l_replace_tl_pie { , } { . }
+%   \tl_replace_all:Nnn \l_replace_tl_pie { Kh } { Kʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_pie { Kh } { K }
+%   \tl_replace_all:Nnn \l_replace_tl_pie { Gh } { Gʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_pie { Ch } { Cʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_pie { Jh } { Jʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_pie { Ʈh } { Ʈʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_pie { ̢Dh } { ̢Dʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_pie { Th } { Tʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_pie { Dh } { Dʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_pie { Ph } { Pʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_pie { Bh } { Bʰ }
+ % \tl_replace_all:Nfn \l_replace_tl_pie { \c_underscore_str a } { \textsubscript{a} }
+ % \tl_replace_all:Nfn \l_replace_tl_pie { \c_underscore_str i } { \textsubscript{i} }
+ % \tl_replace_all:Nfn \l_replace_tl_pie { \c_underscore_str u } { \textsubscript{u} }
+ % \tl_replace_all:Nfn \l_replace_tl_pie { \c_underscore_str e } { \textsubscript{e} }
+ % \tl_replace_all:Nfn \l_replace_tl_pie { \c_underscore_str o } { \textsubscript{o} }
+ \tl_use:N \l_replace_tl_pie
+}
+
+
+\NewDocumentCommand \pietl { m }
+ {
+    \my_replace_pie:n { #1 }
+ }
+
+
+\ExplSyntaxOff

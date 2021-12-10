@@ -1,0 +1,94 @@
+\ExplSyntaxOn
+
+\tl_new:N \l_replace_tl_piir
+\cs_generate_variant:Nn \tl_replace_all:Nnn { Nfn }
+\cs_new:Npn \my_replace_piir_pie:n #1
+{
+ \tl_set:Nn \l_replace_tl_piir {#1}
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;aa } { ā́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str aa } { ā̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;a } { á }
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str a } { à }
+ \tl_replace_all:Nnn \l_replace_tl_piir { "a } { ä }
+ \tl_replace_all:Nnn \l_replace_tl_piir { aa } { ā }
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;ii } { ī́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str ii } { ī̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;i } { í }
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str i } { ì }
+ \tl_replace_all:Nnn \l_replace_tl_piir { "i } { ï }
+ \tl_replace_all:Nnn \l_replace_tl_piir { ii } { ī }
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;uu } { ū́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str uu } { ū̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;u } { ú }
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str u } { ù }
+ \tl_replace_all:Nnn \l_replace_tl_piir { "u } { ü }
+ \tl_replace_all:Nnn \l_replace_tl_piir { uu } { ū }
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;e } { é }
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str e } { è }
+ \tl_replace_all:Nnn \l_replace_tl_piir { "e } { ë }
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;.e } { ə́ }
+ \tl_replace_all:Nnn \l_replace_tl_piir { .e } { ə }
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;o } { ó }
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str o } { ò }
+ \tl_replace_all:Nnn \l_replace_tl_piir { "o } { ö }
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;..rr } { r̥̅́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str ..rr } { r̥̅̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_piir { ..rr } { r̥̅ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;.r } { ŕ̥ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str .r } { r̥̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_piir { .r } { r̥ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;..ll } { l̥̅́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str ..ll } { l̥̅̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_piir { ..ll } { l̥̅ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;.l } { ĺ̥ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str .l } { l̥̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_piir { .l } { l̥ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_piir { .n } { n̥ }
+ \tl_replace_all:Nnn \l_replace_tl_piir { .m } { m̥ }
+ \tl_replace_all:Nnn \l_replace_tl_piir { \c_colon_str n } { ŋ }
+ \tl_replace_all:Nnn \l_replace_tl_piir { sh } { š }
+ \tl_replace_all:Nnn \l_replace_tl_piir { zh } { ž }
+ \tl_replace_all:Nnn \l_replace_tl_piir { gh } { gʰ }
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;ch } { čʰ }
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;jh } { ǰʰ }
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str jh } { j́ʰ }
+ \tl_replace_all:Nnn \l_replace_tl_piir { ;j } { ǰ }
+\tl_replace_all:Nnn \l_replace_tl_piir { ;c } { č }
+ \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str j } { j́ }
+\tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str c } { ć }
+%  \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str j } { ĵ }
+% \tl_replace_all:Nfn \l_replace_tl_piir { \c_colon_str c } { ĉ }
+\tl_replace_all:Nnn \l_replace_tl_piir { dh } { dʰ }
+\tl_replace_all:Nnn \l_replace_tl_piir { bh } { bʰ }
+\tl_replace_all:Nnn \l_replace_tl_piir { y } { i̯ }
+\tl_replace_all:Nnn \l_replace_tl_piir { w } { u̯ }
+\tl_replace_all:Nnn \l_replace_tl_piir { h1 } { h₁ }
+\tl_replace_all:Nnn \l_replace_tl_piir { h2 } { h₂ }
+\tl_replace_all:Nnn \l_replace_tl_piir { h3 } { h₃ }
+%   \tl_replace_all:Nnn \l_replace_tl_piir { Kh } { Kʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_piir { Kh } { K }
+%   \tl_replace_all:Nnn \l_replace_tl_piir { Gh } { Gʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_piir { Ch } { Cʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_piir { Jh } { Jʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_piir { Ʈh } { Ʈʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_piir { ̢Dh } { ̢Dʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_piir { Th } { Tʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_piir { Dh } { Dʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_piir { Ph } { Pʰ }
+%   \tl_replace_all:Nnn \l_replace_tl_piir { Bh } { Bʰ }
+ % \tl_replace_all:Nfn \l_replace_tl_piir { \c_underscore_str a } { \textsubscript{a} }
+ % \tl_replace_all:Nfn \l_replace_tl_piir { \c_underscore_str i } { \textsubscript{i} }
+ % \tl_replace_all:Nfn \l_replace_tl_piir { \c_underscore_str u } { \textsubscript{u} }
+ % \tl_replace_all:Nfn \l_replace_tl_piir { \c_underscore_str e } { \textsubscript{e} }
+ % \tl_replace_all:Nfn \l_replace_tl_piir { \c_underscore_str o } { \textsubscript{o} }
+ \tl_use:N \l_replace_tl_piir
+}
+
+
+\NewDocumentCommand \piirtl { m }
+ {
+    \my_replace_piir_pie:n { #1 }
+ }
+
+
+\ExplSyntaxOff

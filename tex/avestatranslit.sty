@@ -1,0 +1,96 @@
+\ExplSyntaxOn
+
+\tl_new:N \l_replace_tl_ave
+\cs_generate_variant:Nn \tl_replace_all:Nnn { Nfn }
+\cs_new:Npn \my_replace_ave:n #1
+{
+ \tl_set:Nn \l_replace_tl_ave {#1}
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;aa } { ā́ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;AA } { Ā́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str aa } { ā̀ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str AA } { Ā̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_ave { ,,aa } { ā̊ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;a } { á }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;A } { Á }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str a } { à }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str A } { À }
+ \tl_replace_all:Nnn \l_replace_tl_ave { aa } { ā }
+ \tl_replace_all:Nnn \l_replace_tl_ave { AA } { Ā }
+ \tl_replace_all:Nnn \l_replace_tl_ave { .a } { ą }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ,a } { å }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ..ee } { ə̄ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { .e } { ə }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;ii } { ī́ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;II } { Ī́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str ii } { ī̀ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str II } { Ī̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;i } { í }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;I } { Í }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str i } { ì }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str I } { Ì }
+ \tl_replace_all:Nnn \l_replace_tl_ave { .i } { į }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ii } { ī }
+ \tl_replace_all:Nnn \l_replace_tl_ave { II } { Ī }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;uu } { ū́ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;UU } { Ū́ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str uu } { ū̀ }%combined
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str UU } { Ū̀ }%combined
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;u } { ú }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;U } { Ú }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str u } { ù }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str U } { Ù }
+ \tl_replace_all:Nnn \l_replace_tl_ave { uu } { ū }
+ \tl_replace_all:Nnn \l_replace_tl_ave { UU } { Ū }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;ee } { ḗ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;EE } { Ḗ }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str ee } { ḕ }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str EE } { Ḕ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ee } { ē }
+ \tl_replace_all:Nnn \l_replace_tl_ave { EE } { Ē }
+ \tl_replace_all:Nnn \l_replace_tl_ave { .e } { ə }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;e } { é }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;E } { É }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str e } { è }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str E } { È }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;oo } { ṓ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;OO } { Ṓ }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str oo } { ṑ }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str OO } { Ṑ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { oo } { ō }
+ \tl_replace_all:Nnn \l_replace_tl_ave { OO } { Ō }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;o } { ó }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;O } { Ó }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str o } { ò }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str O } { Ò }
+ \tl_replace_all:Nfn \l_replace_tl_ave { ; \c_colon_str n } { ŋ́ }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str nw } { ŋʷ }
+ \tl_replace_all:Nfn \l_replace_tl_ave { \c_colon_str n } { ŋ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { .n } { ṇ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;n } { ń }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;c } { č }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;j } { ǰ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ,t } { t̰ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { .t } { ṭ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { th } { ϑ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { dh } { δ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { bh } { β }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;sh } { š́ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { .sh } { ṣ̌ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { sh } { š }
+ \tl_replace_all:Nnn \l_replace_tl_ave { zh } { ž }
+ \tl_replace_all:Nnn \l_replace_tl_ave { gh } { γ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { ;kh } { x́ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { kh } { x }
+ \tl_replace_all:Nnn \l_replace_tl_ave { xw } { xʷ }
+ \tl_replace_all:Nnn \l_replace_tl_ave { xv } { xᵛ }
+% \tl_replace_all:Nnn \l_replace_tl_ave { , } { . } %音節境界のため
+ \tl_use:N \l_replace_tl_ave
+}
+
+\NewDocumentCommand \avetl { m }
+ {
+    \my_replace_ave:n { #1 }
+ }
+
+
+\ExplSyntaxOff
